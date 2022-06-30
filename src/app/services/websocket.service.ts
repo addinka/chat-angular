@@ -7,8 +7,8 @@ import { map } from 'rxjs/operators';
 const CHAT_URL = "wss://now.ibm-jti.com/ats-chat-dev/";
 
 export interface Message {
-    source: string;
-    content: string;
+  //  source: string;
+    text: string;
 }
 
 @Injectable()
@@ -53,7 +53,8 @@ export class WebsocketService {
             next: (data: Object) => {
                 console.log('Message sent to websocket: ', data);
                 if (ws.readyState === WebSocket.OPEN) {
-                    ws.send(JSON.stringify(data));
+                   // ws.send(JSON.stringify(data));
+                    ws.send(JSON.stringify(data['text']));
                 }
             }
         };

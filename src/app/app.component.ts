@@ -10,7 +10,7 @@ import { WebsocketService } from "./services/websocket.service";
 
 export class AppComponent {
   title = 'socketrv';
-  content = '';
+  text = '';
   received = [];
   sent = [];
 
@@ -24,11 +24,11 @@ export class AppComponent {
 
   sendMsg() {
     let message = {
-      source: '',
-      content: ''
+     // source: '',
+      text: ''
     };
-    message.source = 'localhost';
-    message.content = this.content;
+  //  message.source = 'ade';
+    message.text = this.text;
 
     this.sent.push(message);
     this.WebsocketService.messages.next(message);
