@@ -1,0 +1,112 @@
+<div class="wrapper">
+    <section class="section">
+        <div class="row no-gutters">
+            <div class="col-sm-4">
+                <div class="message-list">
+                    <div class="list-top">
+                        <div class="d-flex">
+                            <div class="search-bar">
+                                <div class="input-container">
+                                    <div class="pad">
+                                        <div class="icon icon-loupe-short-handle"></div>
+                                    </div>
+                                    <input type="text" placeholder="Search..." value="">
+                                </div>
+                            </div>
+
+                            <div class="searchbar">
+                                <div class="icon img-search"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list" id="style-4">
+                        <div class="contact">
+                            <div class="d-flex shift">
+                                <div class="pic-person-list" id="open">
+                                    <img src="https://placedog.net/400/400" alt="puppy-image">
+                                </div>
+                                <div class="name-person-list"> Ade Addinka
+                                    <div class="status-person-list"> Desain UI/UX </div>
+                                    <div class="snippet-chat">test kirim email</div>
+                                </div>
+                                <div class="ml-auto searchbar">
+                                    <div class="dtime">12:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact unread">
+                            <div class="d-flex shift">
+                                <div class="pic-person-list" id="open">
+                                    <img src="https://placedog.net/400/400" alt="puppy-image">
+                                </div>
+                                <div class="name-person-list"> Ade Addinka
+                                    <div class="status-person-list"> Desain UI/UX </div>
+                                    <div class="snippet-chat">test kirim email</div>
+                                </div>
+                                <div class="ml-auto searchbar">
+                                    <div class="dtime">12:00</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-8">
+                <div class="col-sm-12 nopadding">
+                    <div class="d-flex blue">
+                        <div class="pic-person" id="open">
+                            <img src="https://placedog.net/400/400" alt="puppy-image">
+                        </div>
+                        <div class="name-person">
+                            Ade Addinka
+                            <div class="status-person">
+                                Online
+                            </div>
+                        </div>
+                        <div class="ml-auto searchbar">
+                            <div class="icon icon-loupe-short-handle-white"></div>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <div class="message-container">
+                            <div class="datetime-chat">Feb 8 12:01</div>
+                            <div *ngFor="let item of received" class="comment other">
+                                <img src="https://placekitten.com/700/700?image=12" alt="">
+                                <div class="bubble">
+                                    {{item.data.text}}
+                                </div>
+                            </div>
+
+                            <div *ngFor="let message of received[1]?.data['zeremar14@gmail.com']; let i = index" class="comment me">
+                                <img src="https://placekitten.com/300/300?image=10" alt="">
+                                <div class="bubble">
+                                    {{message.text}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="send-chat">
+                            <div class="d-flex justify-content-between bd-highlight">
+                                <div class="clip">
+                                    <img src="../../assets/images/clip.svg">
+                                </div>
+                                <div class="text-chat">
+                                    <input [(ngModel)]="text" type="text" name="text" placeholder="Type a message....">
+                                </div>
+                                <div class="button-send">
+                                    <!-- <button class="sending" (click)="sendMessage()"></button>-->
+                                    <button (click)="sendMsg()"><img src="../../assets/images/sending.svg"></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

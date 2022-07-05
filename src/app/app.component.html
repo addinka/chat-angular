@@ -1,30 +1,6 @@
-<h1>
-  Angular + WebSockets
-</h1>
-<br>
-<div class="row">
-  <div class="column">
-    <textarea [(ngModel)]="text" name="text" cols="40" rows="5"></textarea>
-    <br>
-    <button (click)="sendMsg()">Send Message</button>
-  </div>
+<app-header></app-header>
+<div id="container">
+  <app-loader></app-loader>
+  <router-outlet></router-outlet>
 </div>
-<br>
-<div>
-  <h1>Sent Messages</h1>
-  <br>
-  <ul>
-    <li *ngFor="let item of sent">Source: {{item.source}} -> Content {{item.content}}</li>
-  </ul>
-</div>
-
-<br>
-
-
-<div>
-  <h1>Received Messages</h1>
-  <br>
-  <ul>
-    <li *ngFor="let item of received">Type: {{item.type}} -> Content {{item.data | json}}</li>
-  </ul>
-</div>
+<app-footer></app-footer>
