@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  baseURL: 'https://now.ibm-jti.com/ats-prod/api/v1/',
+  ssoURL: 'https://jti-cloud-sso-login-new.au-syd.mybluemix.net/api/v1/auth/login-sso-angular/dev/jti-career'
 };

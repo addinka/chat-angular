@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseURL: 'https://now.ibm-jti.com/ats-dev/api/v1/',
+  ssoURL:  'https://jti-cloud-sso-login-new.au-syd.mybluemix.net/api/v1/auth/login-sso-angular/dev/jti-career'
 };
 
 /*
